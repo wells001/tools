@@ -13,9 +13,8 @@
 ## 省份简称键盘
 
 
-## git更换https方 式账号
+## git[](./git/)
 
-	git credential-manager remove 停止使用管理工具
 
 
 ## webstorm配置

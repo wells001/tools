@@ -44,8 +44,13 @@ git reset --hard [commitnum] // 强制回退到commitnum信息所在地址  //�
 
 ## git 标签
 
-````
-git tag
-git tag -a [version] -m '[message]'
-git push origin [version]
-````
+
+	git tag
+	git tag -a [version] -m '[message]'
+	git push origin [version]
+
+
+
+## git更换https方 式账号
+
+	git credential-manager remove 停止使用管理工具
