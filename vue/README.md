@@ -70,3 +70,28 @@ exports.cssLoaders = function (options) {
 	
 });
 ````
+
+
+# webpack
+
+## webpack.dev.config.js
+
+	const devWebpackConfig = merge(baseWebpackConfig, {
+		devServer {
+			// ...
+			disableHostCheck: true, // 域名限制时添加可解决
+			// ...
+		}
+	}
+
+
+## webpack.base.conf.js
+```
+	module.exports = {
+		context: path.resolve(__dirname, '../'),
+		entry: {
+			app: ['babel-polyfill','./src/main.js'] // npm install babel-polyfill --save; 并修改app入口文件配置
+		},
+		// ···
+	}
+```

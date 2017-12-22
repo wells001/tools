@@ -4,9 +4,9 @@
 
 ````
 git add .
-git commit -m '[message]'
+git commit -m [message]
 git push 
-		<-f> // 强推
+          <-f> // 强推
 ````
 
 
@@ -45,12 +45,18 @@ git reset --hard [commitnum] // 强制回退到commitnum信息所在地址  //�
 ## git 标签
 
 
-	git tag
-	git tag -a [version] -m '[message]'
-	git push origin [version]
+	git tag // 打标签
+	git tag -a [version] -m [message] // 打带有信息的标签 
+	git push origin [version] // 上传到远程仓库
 
 
 
 ## git更换https方 式账号
 
 	git credential-manager remove 停止使用管理工具
+
+
+## git 更换仓库地址
+
+	git remote set-url origin [url]
+
