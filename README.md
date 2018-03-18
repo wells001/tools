@@ -25,4 +25,4 @@
 ## [vue,webpack配置](./vue)
 
 
-## [中文优选仓库]  (https://www.jianshu.com/p/e37f4dde49a2)
+## [中文优选仓库](https://www.jianshu.com/p/e37f4dde49a2)
