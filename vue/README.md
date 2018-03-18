@@ -28,7 +28,13 @@ module.exports = {
 		port: 8080, // 运行测试页面的端口
 		assetsSubDirectory: 'static', // 编译输出的二级目录
 		assetsPublicPath: '/', // 编译发布的根目录，可配置为资源服务器域名或 CDN 域名
-		proxyTable: {}, // 需要 proxyTable 代理的接口（可跨域）
+		proxyTable: {
+            '/r': {
+                target: 'http://123624.12301.local',
+                changeOrigin: true,  // 是否跨域
+                cookieDomainRewrite: 'localhost', // 设置跨域的 cookieDomain
+            }
+		}, // 需要 proxyTable 代理的接口（可跨域）
 		// CSS Sourcemaps off by default because relative paths are "buggy"
 		// with this option, according to the CSS-Loader README
 		// (https://github.com/webpack/css-loader#sourcemaps)
