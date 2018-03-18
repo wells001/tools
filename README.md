@@ -13,7 +13,7 @@
 ## [省份简称键盘](./git/)
 
 
-## [[git](./git/)
+## [git](./git/)
 
 
 ## [webstorm配置](./webstorm/)
