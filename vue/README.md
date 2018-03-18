@@ -1,6 +1,6 @@
 #关于vue的坑
- 
-## config 
+
+## config
 
 ### index.js
 
@@ -15,7 +15,7 @@ module.exports = {
 		assetsSubDirectory: 'static', // 编译输出的二级目录
 		assetsPublicPath: '/', // 编译发布的根目录，可配置为资源服务器域名或 CDN 域名
 		productionSourceMap: true, // 是否开启生产环境的 SourceMap
-		// 开启后可以在浏览器 source -> webpack 目录中查看源代码 
+		// 开启后可以在浏览器 source -> webpack 目录中查看源代码
 		// Gzip off by default as many popular static hosts such as
 		// Surge or Netlify already gzip all static assets for you.
 		// Before setting to `true`, make sure to:
@@ -32,7 +32,7 @@ module.exports = {
             '/r': {
                 target: 'http://123624.12301.local',
                 changeOrigin: true,  // 是否跨域
-                cookieDomainRewrite: 'localhost', // 设置跨域的 cookieDomain
+                cookieDomainRewrite: 'localhost', // 设置跨域的 cookieDomain [链接](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
             }
 		}, // 需要 proxyTable 代理的接口（可跨域）
 		// CSS Sourcemaps off by default because relative paths are "buggy"
@@ -44,6 +44,8 @@ module.exports = {
 	}
 }
 ````
+[设置跨域](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
+
 ## build
 
 ### utils.js
@@ -51,13 +53,13 @@ module.exports = {
 ````
 
 exports.cssLoaders = function (options) {
-	
+
 	...
-	
+
 	function generateLoaders(loader, loaderOptions) {
-		
+
 		...
-		
+
 		if (options.extract) {
 			return ExtractTextPlugin.extract({
 				use: loaders,
@@ -67,13 +69,13 @@ exports.cssLoaders = function (options) {
 		} else {
 			return ['vue-style-loader'].concat(loaders)
 		}
-		
+
 		...
-		
+
 	}
-	
+
 	...
-	
+
 });
 ````
 
