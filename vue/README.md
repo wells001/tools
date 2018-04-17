@@ -1,4 +1,4 @@
-#关于vue的坑
+#关于vue-webpack配置的坑
 
 ## config
 
@@ -56,7 +56,46 @@ exports.cssLoaders = function (options) {
 
 	...
 
+	 const cssLoader = {
+            loader: 'css-loader',
+            options: {
+                sourceMap: options.sourceMap
+            }
+        },
+        postcssLoader = {
+            loader: 'postcss-loader',
+            options: {
+                sourceMap: options.sourceMap
+            }
+        },
+        px2remLoader = {								// 添加px2remLoader
+            loader: 'px2rem-loader',
+            options: {
+                'baseDpr': 2,
+                remUnit: 75,
+            }
+        };
+
+
 	function generateLoaders(loader, loaderOptions) {
+
+        /*const loaders = options.usePostCSS ?
+            [postcssLoader] :
+            [];
+        loaders.push(cssLoader, px2remLoader);*/
+
+        /* 问题：以上loaders方法顺序，会报错 
+
+
+			Module build failed: Syntax Error 
+
+			(1:1) Unknown word
+
+
+        */
+        const loaders = options.usePostCSS ?
+            [cssLoader, postcssLoader, px2remLoader] :
+            [cssLoader, px2remLoader];
 
 		...
 
@@ -64,7 +103,7 @@ exports.cssLoaders = function (options) {
 			return ExtractTextPlugin.extract({
 				use: loaders,
 				fallback: 'vue-style-loader',
-				publicPath : '../../', // 打包后发现文件路径错误可以尝试修改成此方式
+				publicPath : '../../', 					// 打包后发现文件路径错误可以尝试修改成此方式 /*  已废弃  */
 			})
 		} else {
 			return ['vue-style-loader'].concat(loaders)
@@ -80,14 +119,13 @@ exports.cssLoaders = function (options) {
 ````
 
 
-# webpack
 
 ## webpack.dev.config.js
 
 	const devWebpackConfig = merge(baseWebpackConfig, {
 		devServer {
 			// ...
-			disableHostCheck: true, // 域名限制时添加可解决
+			disableHostCheck: true, 						// 域名限制时添加可解决
 			// ...
 		}
 	}
