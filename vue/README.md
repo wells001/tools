@@ -50,7 +50,7 @@ module.exports = {
 
 ### utils.js
 
-````
+```` javascript
 
 exports.cssLoaders = function (options) {
 
@@ -67,43 +67,22 @@ exports.cssLoaders = function (options) {
             options: {
                 sourceMap: options.sourceMap
             }
-        },
-        px2remLoader = {								// 添加px2remLoader
-            loader: 'px2rem-loader',
-            options: {
-                'baseDpr': 2,
-                remUnit: 75,
-            }
         };
 
 
 	function generateLoaders(loader, loaderOptions) {
 
-        /*const loaders = options.usePostCSS ?
+        const loaders = options.usePostCSS ?
             [postcssLoader] :
             [];
-        loaders.push(cssLoader, px2remLoader);*/
-
-        /* 问题：以上loaders方法顺序，会报错 
-
-
-			Module build failed: Syntax Error 
-
-			(1:1) Unknown word
-
-
-        */
-        const loaders = options.usePostCSS ?
-            [cssLoader, postcssLoader, px2remLoader] :
-            [cssLoader, px2remLoader];
-
+        loaders.push(cssLoader, px2remLoader);
 		...
 
 		if (options.extract) {
 			return ExtractTextPlugin.extract({
 				use: loaders,
 				fallback: 'vue-style-loader',
-				publicPath : '../../', 					// 打包后发现文件路径错误可以尝试修改成此方式 /*  已废弃  */
+				publicPath : '../../', 					// 打包后发现文件路径错误可以尝试修改成此方式 /* 可以解决静态文件url问题 */ 
 			})
 		} else {
 			return ['vue-style-loader'].concat(loaders)
