@@ -112,12 +112,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
 ## webpack.base.conf.js
 ``` javascript
-	module.exports = {
-		context: path.resolve(__dirname, '../'),
-		entry: {
-			app: ['babel-polyfill','./src/main.js'] // npm install babel-polyfill --save; 并修改app入口文件配置
-			// 解决ie等低版本浏览器 Promise undefined 问题
-		},
-		// ···
-	}
+module.exports = {
+	context: path.resolve(__dirname, '../'),
+	entry: {
+		app: ['babel-polyfill','./src/main.js'] // npm install babel-polyfill --save; 并修改app入口文件配置
+		// 解决ie等低版本浏览器 Promise undefined 问题
+	},
+	// ···
+}
 ```
