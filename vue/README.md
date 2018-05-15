@@ -4,7 +4,7 @@
 
 ### index.js
 
-````
+```` javascript
 var path = require('path')
 
 module.exports = {
@@ -100,18 +100,18 @@ exports.cssLoaders = function (options) {
 
 
 ## webpack.dev.config.js
-
-	const devWebpackConfig = merge(baseWebpackConfig, {
-		devServer {
-			// ...
-			disableHostCheck: true, 						// 域名限制时添加可解决
-			// ...
-		}
+``` javascript
+const devWebpackConfig = merge(baseWebpackConfig, {
+	devServer {
+		// ...
+		disableHostCheck: true, 						// 域名限制时添加可解决
+		// ...
 	}
-
+}
+```
 
 ## webpack.base.conf.js
-```
+``` javascript
 	module.exports = {
 		context: path.resolve(__dirname, '../'),
 		entry: {
