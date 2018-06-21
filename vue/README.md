@@ -44,7 +44,7 @@ module.exports = {
   }
 }
 ````
-[设置跨域](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
+> [设置跨域](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
 
 ## build
 
