@@ -7,7 +7,7 @@
 # npm
 
 > --registry
-```bash
+```shell
 --registry=https://registry.npm.taobao.org
 ```
 
