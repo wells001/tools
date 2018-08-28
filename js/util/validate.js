@@ -280,3 +280,14 @@ export function isPoneAvailable (str) {
     const myreg = /^[1][3-8][0-9]{9}$/;
     return myreg.test(str);
 }
+
+export function formatUrl (url) {
+    let reg = /(?:[?&]+)([^&]+)=([^&]+)/g, data = {};
+
+    function fn (str, pro, value) {
+        data[decodeURIComponent(pro)] = decodeURIComponent(value);
+    }
+
+    url.replace(reg, fn);
+    return data;
+}

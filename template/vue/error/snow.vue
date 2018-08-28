@@ -5,7 +5,7 @@
             <div class="main-text">
                 <h1>天啊！那页走丢了。。。</h1>
                 <div class="main-text-a">
-                    <router-link class="home-link" to="/"> 先去首页看看 ？ </router-link>
+                    <router-link class="home-link" to="/"> 先去首页看看 ？</router-link>
                 </div>
             </div>
             <div class="ground">
@@ -23,12 +23,12 @@
 
     export default {
 
-        data() {
+        data () {
             return {}
         },
-        mounted() {
+        mounted () {
             (function () {
-                function ready(fn) {
+                function ready (fn) {
                     if (document.readyState !== 'loading') {
                         fn();
                     } else {
@@ -36,7 +36,7 @@
                     }
                 }
 
-                function makeSnow(el) {
+                function makeSnow (el) {
                     let ctx = el.getContext('2d'),
                         width = 0,
                         height = 0,
@@ -53,7 +53,7 @@
                         this.dy = (Math.random() * 0.5) + 0.5;
                     };
 
-                    function createParticles(count) {
+                    function createParticles (count) {
                         if (count !== particles.length) {
                             particles = [];
                             for (let i = 0; i < count; i++) {
@@ -62,7 +62,7 @@
                         }
                     }
 
-                    function onResize() {
+                    function onResize () {
                         width = window.innerWidth;
                         height = window.innerHeight;
                         el.width = width;
@@ -71,7 +71,7 @@
                         createParticles((width * height) / 10000);
                     }
 
-                    function updateParticles() {
+                    function updateParticles () {
                         ctx.clearRect(0, 0, width, height);
                         ctx.fillStyle = '#f6f9fa';
 
