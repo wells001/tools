@@ -125,7 +125,7 @@
 │  │
 │  └─vue
 │      │  Camera.vue
-│      │  Navigation.vue                            > 新增： 纯CSS导航栏下划线跟随效果
+│      │  Navigation.vue
 │      │
 │      └─error
 │          │  num.vue
@@ -145,6 +145,10 @@
 │                      NovaFlat.svg
 │                      NovaFlat.ttf
 │                      NovaFlat.woff
+│
+├─utils
+│  └─class
+│          Cache.js  > 新增： 缓存类
 │
 ├─vue
 │      README.md
