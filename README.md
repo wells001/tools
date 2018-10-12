@@ -53,3 +53,111 @@
 ## link
 
 ### [vue 中文优选仓库](https://www.jianshu.com/p/584e46bbb873)
+
+
+> 目录结构
+```
+│  .editorconfig
+│  .gitignore
+│  README.md
+│  tree.txt
+│
+├─electron
+│      README.md
+│
+├─git
+│      README.md
+│
+├─js
+│  │  README.md
+│  │
+│  └─util
+│          date.js
+│          index.js
+│          judge-type.js
+│          validate.js
+│
+├─linux
+│      README.md
+│
+├─node
+│      README.md
+│
+├─template
+│  ├─html
+│  │  │  index.html
+│  │  │
+│  │  ├─404
+│  │  │  │  index.html
+│  │  │  │  snow.html
+│  │  │  │
+│  │  │  └─num404
+│  │  │      │  index.html
+│  │  │      │
+│  │  │      ├─css
+│  │  │      │      bootstrap.css
+│  │  │      │      font-awesome.min.css
+│  │  │      │      style.css
+│  │  │      │
+│  │  │      ├─fonts
+│  │  │      │      fontawesome-webfont.eot
+│  │  │      │      fontawesome-webfont.svg
+│  │  │      │      fontawesome-webfont.ttf
+│  │  │      │      fontawesome-webfont.woff
+│  │  │      │      FontAwesome.otf
+│  │  │      │      glyphicons-halflings-regular.eot
+│  │  │      │      glyphicons-halflings-regular.svg
+│  │  │      │      glyphicons-halflings-regular.ttf
+│  │  │      │      glyphicons-halflings-regular.woff
+│  │  │      │
+│  │  │      └─js
+│  │  │              bootstrap.js
+│  │  │              countUp.js
+│  │  │              custom.js
+│  │  │              jquery-1.10.2.js
+│  │  │
+│  │  ├─car
+│  │  │      图片压缩.html
+│  │  │
+│  │  └─imgtobase64
+│  │          build.js
+│  │          js.js
+│  │
+│  └─vue
+│      │  Camera.vue
+│      │  Navigation.vue                            > 新增： 纯CSS导航栏下划线跟随效果
+│      │
+│      └─error
+│          │  num.vue
+│          │  snow.vue
+│          │
+│          └─assets
+│              ├─css
+│              │      iconfont.css
+│              │      stylesheet.css
+│              │
+│              └─fonts
+│                      iconfont.eot
+│                      iconfont.svg
+│                      iconfont.ttf
+│                      iconfont.woff
+│                      NovaFlat.eot
+│                      NovaFlat.svg
+│                      NovaFlat.ttf
+│                      NovaFlat.woff
+│
+├─vue
+│      README.md
+│
+├─webstorm
+│      Default.xml
+│      Monokai-Sublime-18.3.28.icls
+│      Monokai-Sublime-18.5.18.icls
+│      Monokai-Sublime-xq.icls
+│      README.md
+│
+└─WeChat
+        README.md
+        success.html
+
+```

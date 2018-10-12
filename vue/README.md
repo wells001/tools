@@ -1,4 +1,5 @@
-#关于vue-webpack配置的坑
+# 关于 vue-webpack配置的坑
+> vue2.0 vue-cli 2.9
 
 ## config
 
@@ -44,7 +45,8 @@ module.exports = {
   }
 }
 ````
-> [设置跨域](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
+
+> [设置代理](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
 
 ## build
 
@@ -82,7 +84,7 @@ exports.cssLoaders = function (options) {
       return ExtractTextPlugin.extract({
         use: loaders,
         fallback: 'vue-style-loader',
-        publicPath : '../../',           // 打包后发现文件路径错误可以尝试修改成此方式 /* 可以解决静态文件url问题 */
+        publicPath : '../../',           // 打包后发现文件路径错误可以尝试修改成此方式 可解决css引入静态资源打包问题
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -98,8 +100,10 @@ exports.cssLoaders = function (options) {
 ````
 
 
+# 附加
 
 ## webpack.dev.config.js
+> vue-li 2.9 高版本可能存在问题
 ``` javascript
 const devWebpackConfig = merge(baseWebpackConfig, {
   devServer {
