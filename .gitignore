@@ -12,3 +12,4 @@ tree.txt
 *.ntvs*
 *.njsproj
 *.sln
+_config.yml
