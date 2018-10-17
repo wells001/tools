@@ -125,3 +125,11 @@ module.exports = {
   // ···
 }
 ```
+
+## vue-router
+> mode: history
+```` nginx
+location / {
+  try_files $uri $uri/ /index.html; // 使用history 模式，必须要设置 config. build. assetsPublicPath
+}
+````
