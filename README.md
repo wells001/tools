@@ -72,10 +72,14 @@
 │  │  README.md
 │  │
 │  └─util
-│          date.js
-│          index.js
-│          judge-type.js
-│          validate.js
+│       │  date.js
+│       │  index.js
+│       │  judge-type.js
+│       │  validate.js
+│       └─utils
+│          └─class
+│                  Cache.js  > 新增： 缓存类
+│
 │
 ├─linux
 │      README.md
@@ -145,11 +149,7 @@
 │                      NovaFlat.svg
 │                      NovaFlat.ttf
 │                      NovaFlat.woff
-│
-├─utils
-│  └─class
-│          Cache.js  > 新增： 缓存类
-│
+
 ├─vue
 │      README.md
 │
