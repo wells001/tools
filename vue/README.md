@@ -48,6 +48,11 @@ module.exports = {
 
 > [设置代理](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
 
+
+#### 错误提示
+
+    > '^/r' 匹配方式 会导致 '/register' 页面被代理，直接转发至代理服务器 修改为 '^/r/'
+
 ## build
 
 ### utils.js
