@@ -34,6 +34,9 @@ module.exports = {
         target: 'http://example.com',
         changeOrigin: true,  // 是否跨域
         cookieDomainRewrite: 'localhost', // 设置跨域的 cookieDomain [链接](https://github.com/chimurai/http-proxy-middleware#http-proxy-options)
+        pathRewrite: {
+          '^/r/': '/'
+        }
       }
     }, // 需要 proxyTable 代理的接口（可跨域）
     // CSS Sourcemaps off by default because relative paths are "buggy"
@@ -101,7 +104,7 @@ exports.cssLoaders = function (options) {
 
   ...
 
-});
+};
 ````
 
 
@@ -116,7 +119,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     disableHostCheck: true,             // 域名限制时添加可解决
     // ...
   }
-}
+});
 ```
 
 ## webpack.base.conf.js
