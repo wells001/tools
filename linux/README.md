@@ -25,3 +25,10 @@
 
  [自动部署分支](./auto-bash/try-test.sh)
  [自动部署标签](./auto-bash/try-tag.sh)
+
+## 执行结果输出到文件
+
+```
+echo "日志内容"  > 文件
+git log > index.md
+```
