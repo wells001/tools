@@ -69,7 +69,7 @@ git remote set-url origin [url]
 ## git 比较commitId代码
 
 ```
-git diff --raw [commitId]
+git diff --raw [commitId|branch]
 ```
 
 
