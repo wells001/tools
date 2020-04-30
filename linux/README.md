@@ -23,3 +23,17 @@ $ find / -name '*' | xargs grep -r 'timersub'
 ## 端口绑定问题
 
 [Windows10内置Linux子系统初体验](http://www.jianshu.com/p/bc38ed12da1d)
+
+# auto bash
+## 自动部署
+> 项目中需要 编译后到新仓库部署 手动打标签过慢，过于麻烦
+
+ [自动部署分支](./auto-bash/try-test.sh)
+ [自动部署标签](./auto-bash/try-tag.sh)
+
+## 执行结果输出到文件
+
+```
+echo "日志内容"  > 文件
+git log > index.md
+```

@@ -6,7 +6,9 @@
 
 # npm
 
+
 > --registry
+
 ```shell
 --registry=https://registry.npm.taobao.org
 ```
@@ -16,6 +18,13 @@ e.g.
 npm install --registry=https://registry.npm.taobao.org
 ```
 
+## .npmrc
+
+```
+registry = https://registry.npm.taobao.org
+phantomjs_cdnurl=http://cnpmjs.org/downloads
+sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+```
 
 ## chromedriver
 > chromedriver 安装失败
