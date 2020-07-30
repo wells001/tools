@@ -9,7 +9,7 @@
 
 > --registry
 
-```shell
+```
 --registry=https://registry.npm.taobao.org
 ```
 
@@ -29,14 +29,14 @@ sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
 ## chromedriver
 > chromedriver 安装失败
 
-```bash
+``` bash
 npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
 ```
 
 ## sass
 > sass文件解析失败问题，不需要修改module.rules vue-loader.conf.js 配置很完善，只需要安装依赖
 
-```bash
+``` bash
 npm install sass-loader node-sass vue-style-loader --save-dev
 ```
 
