@@ -5,6 +5,11 @@
 	ls,cd,vi,vim
 
 
+## 文件夹内容寻找
+
+```
+$ find / -name '*' | xargs grep -r 'timersub'
+```
 ## 权限
 
 	sudo // 禁止访问时可以尝试加入
