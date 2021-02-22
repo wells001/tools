@@ -37,3 +37,10 @@ $ find / -name '*' | xargs grep -r 'timersub'
 echo "日志内容"  > 文件
 git log > index.md
 ```
+
+
+## wsl Ubuntu mysql8 修改密码
+```
+alter user 'root'@'%' identified by '123456'; // 修改root登录密码
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456'; // 修改可视化连接密码
+```
