@@ -7,7 +7,7 @@
 ## 查看目录内文件夹大小
 
 ```
-du -h --max-depth=1
+du -h --max-depth=1 | sort -rh
 ```
 
 ## 文件夹内容寻找
